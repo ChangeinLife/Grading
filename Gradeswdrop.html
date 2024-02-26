@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<h2>Final Grade with Drop</h2>
+<p></p>
+<head>
+</head>
+<body>
+
+
+	<p>Enter Test #1 Score : <input type="text" id="num1" name="text1"></p>
+	<p>Enter Test #2 Score : <input type="text" id="num2" name="text2"></p>
+	<p>Enter Test #3 Score : <input type="text" id="num3" name="text3"></p>
+	<p>Enter Test #4 Score : <input type="text" id="num4" name="text4"></p>
+	<p>Enter Test #5 Score : <input type="text" id="num5" name="text5"></p>
+
+	
+	<p>Click the button to calculate Final Grade with Lowest Hourly Exam Dropped.</p>
+	<button onclick="lectureFunction()">Final Average</button></br>
+	
+	
+	<p id="demo"></p><br>
+	
+	<p>To reset the form, use the reset button.
+	<button onclick="Reset()">Reset</button></br>
+	
+	<script>
+
+	let grades = [num1, num2, num3, num4, num5]
+	
+	document.write(grades)	
+	
+
+	function lectureFunction() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let num3 = parseFloat(document.getElementById("num3").value);
+    let num4 = parseFloat(document.getElementById("num4").value);
+    let num5 = parseFloat(document.getElementById("num5").value);
+
+
+
+	//let num6 = ((num1 + num2 + num3 + num4 + num5) / 5);
+	let MidTermGrade = num6;
+    var Letter = MidTermGrade
+    if (Letter >=90)
+    document.getElementById("demo").innerHTML = ("MidTerm Average: " + MidTermGrade + "&nbsp;" + "A");
+    else if (Letter >=80)
+    document.getElementById("demo").innerHTML = ("MidTerm Average: " + MidTermGrade + "&nbsp;" + "B");
+    else if (Letter >=70)
+    document.getElementById("demo").innerHTML = ("MidTerm Average: " + MidTermGrade + "&nbsp;" + "C");
+    else if (Letter >=60)
+    document.getElementById("demo").innerHTML = ("MidTerm Average: " + MidTermGrade + "&nbsp;" + "D");
+    else
+    document.getElementById("demo").innerHTML = ("MidTerm Average: " + MidTermGrade + "&nbsp;" + "F");
+
+}
+
+function Reset() {
+	document.getElementById("num1").value ="";
+	document.getElementById("num2").value ="";
+	document.getElementById("num3").value ="";
+	document.getElementById("num4").value ="";
+	document.getElementById("num5").value ="";
+}
+	
+	</script>
+
+</body>
+</html>
